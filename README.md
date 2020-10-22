@@ -1,2 +1,2 @@
 # timus
-Problems solving from [linked](https://acm.timus.ru/)
+Problems solving from [https://acm.timus.ru/](https://acm.timus.ru/)
