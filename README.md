@@ -1,2 +1,2 @@
 # timus
-Problems solving from acm.timus.ru/
+Problems solving from [](acm.timus.ru)
