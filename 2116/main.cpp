@@ -59,41 +59,20 @@ void dfs(int x, int y, int c) {
 
 int main() {
     cin >> n >> a >> b;
-    if (n <= F) {
-        int c = 0;
-        for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (g[i][j] == 0) {
-                    dfs(i, j, ++c);
-                }
-            }
-        }
-        cout << c << '\n';
-        return 0;
-    }
-    if (a < b) {
-        swap(a, b);
-    }
-
     if (a == 0 && b == 0) {
         cout << 1ll * n * n << '\n';
+        return 0;
     }
-    else if (b == 0) {
-        cout << a * a << '\n';
+
+    n = min(n, 15);
+    int c = 0;
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < n; ++j) {
+            if (g[i][j] == 0) {
+                dfs(i, j, ++c);
+            }
+        }
     }
-    else if (a == 2 && b == 1) {
-        cout << 1 << '\n';
-    }
-    else if (b == 1) {
-        cout << 2 << '\n';
-    }
-    else if (a == 2 && b == 2) {
-        cout << 8 << '\n';
-    }
-    else if (a == 3 && b == 2) {
-        cout << 1 << '\n';
-    }
-    else if (a == 3 && b == 3) {
-        cout << 18 << '\n';
-    }
+    cout << c << '\n';
+    return 0;
 }
