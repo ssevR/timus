@@ -1,0 +1,96 @@
+math/bigint.hpp: In function 'int main()':
+math/bigint.hpp:500:15: error: no match for 'operator^' (operand types are 'std::ostream' {aka 'std::basic_ostream<char>'} and 'int')
+math/bigint.hpp:500:15: note: candidate: 'operator^(int, int)' (built-in)
+math/bigint.hpp:500:15: note:   no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'int'
+In file included from /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from math/bigint.hpp:3:
+/usr/include/c++/14.1.1/bitset:1577:5: note: candidate: 'template<long unsigned int _Nb> std::bitset<_Nb> std::operator^(const bitset<_Nb>&, const bitset<_Nb>&)'
+ 1577 |     operator^(const bitset<_Nb>& __x, const bitset<_Nb>& __y) _GLIBCXX_NOEXCEPT
+      |     ^~~~~~~~
+/usr/include/c++/14.1.1/bitset:1577:5: note:   template argument deduction/substitution failed:
+math/bigint.hpp:500:16: note:   'std::ostream' {aka 'std::basic_ostream<char>'} is not derived from 'const std::bitset<_Nb>'
+In file included from /usr/include/c++/14.1.1/valarray:605,
+                 from /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/stdc++.h:166:
+/usr/include/c++/14.1.1/bits/valarray_after.h:410:5: note: candidate: 'template<class _Dom1, class _Dom2> std::_Expr<std::__detail::_BinClos<std::__bitwise_xor, std::_Expr, std::_Expr, _Dom1, _Dom2>, typename std::__fun<std::__bitwise_xor, typename _Dom1::value_type>::result_type> std::operator^(const _Expr<_Dom1, typename _Dom1::value_type>&, const _Expr<_Dom2, typename _Dom2::value_type>&)'
+  410 |     _DEFINE_EXPR_BINARY_OPERATOR(^, struct std::__bitwise_xor)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/14.1.1/bits/valarray_after.h:410:5: note:   template argument deduction/substitution failed:
+math/bigint.hpp:500:16: note:   'std::ostream' {aka 'std::basic_ostream<char>'} is not derived from 'const std::_Expr<_Dom1, typename _Dom1::value_type>'
+/usr/include/c++/14.1.1/bits/valarray_after.h:410:5: note: candidate: 'template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__bitwise_xor, std::_Expr, std::_Constant, _Dom, typename _Dom::value_type>, typename std::__fun<std::__bitwise_xor, typename _Dom1::value_type>::result_type> std::operator^(const _Expr<_Dom1, typename _Dom1::value_type>&, const typename _Dom::value_type&)'
+  410 |     _DEFINE_EXPR_BINARY_OPERATOR(^, struct std::__bitwise_xor)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/14.1.1/bits/valarray_after.h:410:5: note:   template argument deduction/substitution failed:
+math/bigint.hpp:500:16: note:   'std::ostream' {aka 'std::basic_ostream<char>'} is not derived from 'const std::_Expr<_Dom1, typename _Dom1::value_type>'
+/usr/include/c++/14.1.1/bits/valarray_after.h:410:5: note: candidate: 'template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__bitwise_xor, std::_Constant, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__bitwise_xor, typename _Dom1::value_type>::result_type> std::operator^(const typename _Dom::value_type&, const _Expr<_Dom1, typename _Dom1::value_type>&)'
+  410 |     _DEFINE_EXPR_BINARY_OPERATOR(^, struct std::__bitwise_xor)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/14.1.1/bits/valarray_after.h:410:5: note:   template argument deduction/substitution failed:
+math/bigint.hpp:500:16: note:   mismatched types 'const std::_Expr<_Dom1, typename _Dom1::value_type>' and 'int'
+/usr/include/c++/14.1.1/bits/valarray_after.h:410:5: note: candidate: 'template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__bitwise_xor, std::_Expr, std::_ValArray, _Dom, typename _Dom::value_type>, typename std::__fun<std::__bitwise_xor, typename _Dom1::value_type>::result_type> std::operator^(const _Expr<_Dom1, typename _Dom1::value_type>&, const valarray<typename _Dom::value_type>&)'
+  410 |     _DEFINE_EXPR_BINARY_OPERATOR(^, struct std::__bitwise_xor)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/14.1.1/bits/valarray_after.h:410:5: note:   template argument deduction/substitution failed:
+math/bigint.hpp:500:16: note:   'std::ostream' {aka 'std::basic_ostream<char>'} is not derived from 'const std::_Expr<_Dom1, typename _Dom1::value_type>'
+/usr/include/c++/14.1.1/bits/valarray_after.h:410:5: note: candidate: 'template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__bitwise_xor, std::_ValArray, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__bitwise_xor, typename _Dom1::value_type>::result_type> std::operator^(const valarray<typename _Dom::value_type>&, const _Expr<_Dom1, typename _Dom1::value_type>&)'
+  410 |     _DEFINE_EXPR_BINARY_OPERATOR(^, struct std::__bitwise_xor)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/14.1.1/bits/valarray_after.h:410:5: note:   template argument deduction/substitution failed:
+math/bigint.hpp:500:16: note:   mismatched types 'const std::_Expr<_Dom1, typename _Dom1::value_type>' and 'int'
+/usr/include/c++/14.1.1/valarray:1201:1: note: candidate: 'template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__bitwise_xor, std::_ValArray, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__bitwise_xor, _Tp>::result_type> std::operator^(const valarray<_Tp>&, const valarray<_Tp>&)'
+ 1201 | _DEFINE_BINARY_OPERATOR(^, __bitwise_xor)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/14.1.1/valarray:1201:1: note:   template argument deduction/substitution failed:
+math/bigint.hpp:500:16: note:   'std::ostream' {aka 'std::basic_ostream<char>'} is not derived from 'const std::valarray<_Tp>'
+/usr/include/c++/14.1.1/valarray:1201:1: note: candidate: 'template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__bitwise_xor, std::_ValArray, std::_Constant, _Tp, _Tp>, typename std::__fun<std::__bitwise_xor, _Tp>::result_type> std::operator^(const valarray<_Tp>&, const typename valarray<_Tp>::value_type&)'
+ 1201 | _DEFINE_BINARY_OPERATOR(^, __bitwise_xor)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/14.1.1/valarray:1201:1: note:   template argument deduction/substitution failed:
+math/bigint.hpp:500:16: note:   'std::ostream' {aka 'std::basic_ostream<char>'} is not derived from 'const std::valarray<_Tp>'
+/usr/include/c++/14.1.1/valarray:1201:1: note: candidate: 'template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__bitwise_xor, std::_Constant, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__bitwise_xor, _Tp>::result_type> std::operator^(const typename valarray<_Tp>::value_type&, const valarray<_Tp>&)'
+ 1201 | _DEFINE_BINARY_OPERATOR(^, __bitwise_xor)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/14.1.1/valarray:1201:1: note:   template argument deduction/substitution failed:
+math/bigint.hpp:500:16: note:   mismatched types 'const std::valarray<_Tp>' and 'int'
+In file included from /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/stdc++.h:41:
+/usr/include/c++/14.1.1/cstddef:146:3: note: candidate: 'constexpr std::byte std::operator^(byte, byte)'
+  146 |   operator^(byte __l, byte __r) noexcept
+      |   ^~~~~~~~
+/usr/include/c++/14.1.1/cstddef:146:18: note:   no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'std::byte'
+  146 |   operator^(byte __l, byte __r) noexcept
+      |             ~~~~~^~~
+In file included from /usr/include/c++/14.1.1/streambuf:43,
+                 from /usr/include/c++/14.1.1/bits/streambuf_iterator.h:35,
+                 from /usr/include/c++/14.1.1/iterator:66,
+                 from /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/stdc++.h:54:
+/usr/include/c++/14.1.1/bits/ios_base.h:94:3: note: candidate: 'constexpr std::_Ios_Fmtflags std::operator^(_Ios_Fmtflags, _Ios_Fmtflags)'
+   94 |   operator^(_Ios_Fmtflags __a, _Ios_Fmtflags __b) _GLIBCXX_NOTHROW
+      |   ^~~~~~~~
+/usr/include/c++/14.1.1/bits/ios_base.h:94:27: note:   no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'std::_Ios_Fmtflags'
+   94 |   operator^(_Ios_Fmtflags __a, _Ios_Fmtflags __b) _GLIBCXX_NOTHROW
+      |             ~~~~~~~~~~~~~~^~~
+/usr/include/c++/14.1.1/bits/ios_base.h:144:3: note: candidate: 'constexpr std::_Ios_Openmode std::operator^(_Ios_Openmode, _Ios_Openmode)'
+  144 |   operator^(_Ios_Openmode __a, _Ios_Openmode __b) _GLIBCXX_NOTHROW
+      |   ^~~~~~~~
+/usr/include/c++/14.1.1/bits/ios_base.h:144:27: note:   no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'std::_Ios_Openmode'
+  144 |   operator^(_Ios_Openmode __a, _Ios_Openmode __b) _GLIBCXX_NOTHROW
+      |             ~~~~~~~~~~~~~~^~~
+/usr/include/c++/14.1.1/bits/ios_base.h:191:3: note: candidate: 'constexpr std::_Ios_Iostate std::operator^(_Ios_Iostate, _Ios_Iostate)'
+  191 |   operator^(_Ios_Iostate __a, _Ios_Iostate __b) _GLIBCXX_NOTHROW
+      |   ^~~~~~~~
+/usr/include/c++/14.1.1/bits/ios_base.h:191:26: note:   no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'std::_Ios_Iostate'
+  191 |   operator^(_Ios_Iostate __a, _Ios_Iostate __b) _GLIBCXX_NOTHROW
+      |             ~~~~~~~~~~~~~^~~
+In file included from /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/stdc++.h:176:
+/usr/include/c++/14.1.1/future:170:20: note: candidate: 'constexpr std::launch std::operator^(launch, launch)'
+  170 |   constexpr launch operator^(launch __x, launch __y) noexcept
+      |                    ^~~~~~~~
+/usr/include/c++/14.1.1/future:170:37: note:   no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'std::launch'
+  170 |   constexpr launch operator^(launch __x, launch __y) noexcept
+      |                              ~~~~~~~^~~
+In file included from /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/stdc++.h:198:
+/usr/include/c++/14.1.1/charconv:637:3: note: candidate: 'constexpr std::chars_format std::operator^(chars_format, chars_format)'
+  637 |   operator^(chars_format __lhs, chars_format __rhs) noexcept
+      |   ^~~~~~~~
+/usr/include/c++/14.1.1/charconv:637:26: note:   no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'std::chars_format'
+  637 |   operator^(chars_format __lhs, chars_format __rhs) noexcept
+      |             ~~~~~~~~~~~~~^~~~~
