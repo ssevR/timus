@@ -1,3 +1,10 @@
+Consider a permutation a1, a2, …, an (all ai are different integers in range from 1 to n). Let us call k-inversion a sequence of numbers i1, i2, …, ik such that 1 ≤ i1 < i2 < … < ik ≤ n and ai1 > ai2 > … > aik. Your task is to evaluate the number of different k-inversions in a given permutation.
+Input
+The first line contains integers n and k (1 ≤ n ≤ 20000; 2 ≤ k ≤ 10). The second line is filled with n integers ai. 
+
+i wrote code im getting re. find a bug:
+
+
 #pragma GCC optimize("O3")
 
 #include <bits/stdc++.h>
@@ -176,16 +183,12 @@ int main() {
     }
     int sz = b.size();
 
-    vector<fenwick_tree<ll>> fw(k, fenwick_tree<ll>(sz));
+    vector<fenwick_tree<int>> fw(k, fenwick_tree<int>(sz));
     for (int i = 0; i < n; ++i) {
         fw[0].add(a[i], 1);
-        for (int j = k - 1; j >= 1; --j) {
+        for (int j = 1; j < k; ++j) {
             fw[j].add(a[i], fw[j - 1].sum(a[i] + 1, sz));
-            ll cur = fw[j].sum(a[i], a[i] + 1);
-            if (cur > INF) {
-                fw[j].add(a[i], -(cur / INF * INF));
-            }
         }
     }
-    cout << fw[k - 1].sum(0, sz) % INF << '\n';
+    cout << fw[k - 1].sum(0, sz) << '\n';
 }
